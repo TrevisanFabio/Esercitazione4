@@ -12,7 +12,7 @@
       integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
       crossorigin=""
     ></script>
-    <title>Other page</title>
+    <title>Mappa</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <link rel="stylesheet" href="styles.css" />
@@ -24,22 +24,102 @@
       <a href="/page2.html" aria-current="page">Other page</a>
     </nav>
     <main>
-      <h1>My other page</h1>
+      <h1>Esplora la mappa</h1>
       <div id="map"></div>
     </main>
   </body>
   <script>
-    var map = L.map('map').setView([45.552024, 11.555257], 13);
-    var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    var monumenti = L.layerGroup();
+    var scuole = L.layerGroup();
+
+    var rossi = L.marker([45.552363, 11.555627])
+      .bindPopup('ITIS A. Rossi')
+      .addTo(scuole);
+    var circle = L.circle([45.552363, 11.555627], {
+      color: 'green',
+      fillColor: 'green',
+      fillOpacity: 0.5,
+      radius: 53
+    }).bindPopup('Luogo molto frequentato').addTo(scuole);
+    var pigafetta = L.marker([45.547669264786, 11.541437785200719])
+      .bindPopup('Liceo A. Pigafetta')
+      .addTo(scuole);
+    var circle = L.circle([45.547669264786, 11.541437785200719], {
+      color: 'red',
+      fillColor: '#f03',
+      fillOpacity: 0.5,
+      radius: 53
+    }).bindPopup('Luogo poco frequentato').addTo(scuole);
+    var quadri = L.marker([45.558223, 11.534821])
+      .bindPopup('Liceo G. B. Quadri')
+      .addTo(scuole);
+      var circle = L.circle([45.558223, 11.534821], {
+      color: 'blue',
+      fillColor: 'blue',
+      fillOpacity: 0.5,
+      radius: 53
+    }).bindPopup('Luogo non frequentato').addTo(scuole);
+    var studi = L.marker([45.5627948950735, 11.555285538002124])
+      .bindPopup('Cittadella degli studi')
+      .addTo(scuole);
+    var circle = L.circle([45.5627948950735, 11.555285538002124], {
+      color: 'green',
+      fillColor: 'green',
+      fillOpacity: 0.5,
+      radius: 300
+    }).bindPopup('Luogo molto frequentato').addTo(scuole);
+
+    var basilica = L.marker([45.54702567125524, 11.546569338196457])
+      .bindPopup('Basilica Palladiana')
+      .addTo(monumenti);
+
+    var monteBerico = L.marker([45.53509331192967, 11.545524691995693])
+      .bindPopup('Monte Berico')
+      .addTo(monumenti);
+
+    var parco = L.marker([45.553834969572335, 11.547830836627435])
+      .bindPopup('Parco Querini')
+      .addTo(monumenti);
+    var stadio = L.marker([45.54438210206607, 11.556208696426452])
+      .bindPopup('Stadio Romeo Menti')
+      .addTo(monumenti);
+
+    var mbAttr =
+      'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery   ©   <a href="https://www.mapbox.com/">Mapbox</a>';
+      var mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+ 
+
+    var streets = L.tileLayer(mbUrl, {
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1,
+      attribution: mbAttr,
+    });
+
+    var osm = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution:
         '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    }).addTo(map);
-    var marker = L.marker([45.552024, 11.555257]).addTo(map);
-    var marker = L.marker([45.5565, 11.5346]).addTo(map);
-    var popup = L.popup()
-    L.marker([51.5, -0.09]).addTo(map)
-    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
-    .openPopup();
+    });
+
+    var map = L.map('map', {
+      center: [45.555, 11.555257],
+      zoom: 13,
+      layers: [osm, scuole],
+    });
+    var satellite = L.tileLayer(mbUrl, {id: 'mapbox/satellite-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
+    var streets = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
+    var baseLayers = {
+      OpenStreetMap: osm,
+      Strade: streets,
+      Satellite: satellite,
+    };
+
+    var overlays = {
+      "Luoghi frequentati": scuole,
+      "Monumenti":monumenti,
+    };
+
+    var layerControl = L.control.layers(baseLayers, overlays).addTo(map);
   </script>
 </html>
