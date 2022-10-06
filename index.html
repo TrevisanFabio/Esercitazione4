@@ -9,16 +9,49 @@
       Remove all code in `styles.css`!
     -->
     <link rel="stylesheet" href="styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <script type="module" src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
   </head>
   <body>
-    <nav>
-    <a href="/" aria-current="page">Home Vella</a>
-    <a href="/page2.html">Other page</a>
-    <a href="/" aria-current="page">Home Vella</a>
-    <a href="/page2.html">Other page</a>
-    <a href="/" aria-current="page">Profilo</a>
+    
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img src="Instalogo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+          Commap
+        </a>
+      </div>
     </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home Vella</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page2.html">Other Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Home Vella</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page2.html">Other Page</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ">Profilo</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+    <div class="container text-bg-light p-3">
     <main>
       <h1>Home page</h1>
 
@@ -31,6 +64,7 @@
       <h1>Ci ci ci</h1>
 
       <h1>Vella</h1>
+    </div>
     </main>
   </body>
 </html>
