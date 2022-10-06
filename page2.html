@@ -38,8 +38,8 @@
     var marker = L.marker([45.552024, 11.555257]).addTo(map);
     var marker = L.marker([45.5565, 11.5346]).addTo(map);
     var popup = L.popup()
-    .setLatLng([51.513, -0.09])
-    .setContent("I am a standalone popup.")
-    .openOn(map);
+    L.marker([51.5, -0.09]).addTo(map)
+    .bindPopup('A pretty CSS3 popup.<br> Easily customizable.')
+    .openPopup();
   </script>
 </html>
