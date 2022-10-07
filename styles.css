@@ -9,8 +9,6 @@ body {
   background-color: green;
 }
 
-
-
 nav a {
   display: inline-block;
   min-width: 9rem;
@@ -32,6 +30,8 @@ main {
 h1 {
   font-weight: bold;
   font-size: 1.5rem;
+  text-align: center;
+  color: green;
 }
 #map {
   height: 180px;
@@ -42,10 +42,10 @@ h1 {
 }
 
 .navbar.center .navbar-inner .nav {
-  display:inline-block;
+  display: inline-block;
   float: none;
 }
-.sfondo{
+.sfondo {
   background-color: green;
   height: 100%;
 }
