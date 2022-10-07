@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js" integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk" crossorigin="anonymous"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.min.js"
+      integrity="sha384-IDwe1+LCz02ROU9k972gdyvl+AESN10+x7tBKgc9I5HFtuNz0wWnPclzo6p9vxnk"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
@@ -21,41 +30,48 @@
     <script type="module" src="script.js"></script>
   </head>
   <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse " id="navbarNav">
-      <ul class="navbar-nav justify-content-center ">
-        <li class="nav-item">
-          <a class="nav-link"  href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" >Mappa</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Esplora</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="page2.html">Statistiche</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link ">Profilo</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-    <main>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page">Mappa</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Esplora</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="page2.html">Statistiche</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link">Profilo</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-      <div class="container text-bg-light">
-      <h1>Esplora la mappa</h1>
-      <div id="map"></div>
-      
+    <div class="container text-bg-light">
+      <main>
+        <h1>Esplora la mappa</h1>
+        <div id="map"></div>
+      </main>
     </div>
-    </main>
   </body>
   <script>
     var monumenti = L.layerGroup();
@@ -68,8 +84,10 @@
       color: 'green',
       fillColor: 'green',
       fillOpacity: 0.5,
-      radius: 53
-    }).bindPopup('Luogo molto frequentato').addTo(scuole);
+      radius: 53,
+    })
+      .bindPopup('Luogo molto frequentato')
+      .addTo(scuole);
     var pigafetta = L.marker([45.547669264786, 11.541437785200719])
       .bindPopup('Liceo A. Pigafetta')
       .addTo(scuole);
@@ -77,17 +95,21 @@
       color: 'red',
       fillColor: '#f03',
       fillOpacity: 0.5,
-      radius: 53
-    }).bindPopup('Luogo poco frequentato').addTo(scuole);
+      radius: 53,
+    })
+      .bindPopup('Luogo poco frequentato')
+      .addTo(scuole);
     var quadri = L.marker([45.558223, 11.534821])
       .bindPopup('Liceo G. B. Quadri')
       .addTo(scuole);
-      var circle = L.circle([45.558223, 11.534821], {
+    var circle = L.circle([45.558223, 11.534821], {
       color: 'blue',
       fillColor: 'blue',
       fillOpacity: 0.5,
-      radius: 53
-    }).bindPopup('Luogo non frequentato').addTo(scuole);
+      radius: 53,
+    })
+      .bindPopup('Luogo non frequentato')
+      .addTo(scuole);
     var studi = L.marker([45.5627948950735, 11.555285538002124])
       .bindPopup('Cittadella degli studi')
       .addTo(scuole);
@@ -95,8 +117,10 @@
       color: 'green',
       fillColor: 'green',
       fillOpacity: 0.5,
-      radius: 300
-    }).bindPopup('Luogo molto frequentato').addTo(scuole);
+      radius: 300,
+    })
+      .bindPopup('Luogo molto frequentato')
+      .addTo(scuole);
 
     var basilica = L.marker([45.54702567125524, 11.546569338196457])
       .bindPopup('Basilica Palladiana')
@@ -115,8 +139,8 @@
 
     var mbAttr =
       'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery   ©   <a href="https://www.mapbox.com/">Mapbox</a>';
-      var mbUrl = 'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
- 
+    var mbUrl =
+      'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
 
     var streets = L.tileLayer(mbUrl, {
       id: 'mapbox/streets-v11',
@@ -136,8 +160,18 @@
       zoom: 13,
       layers: [osm, scuole],
     });
-    var satellite = L.tileLayer(mbUrl, {id: 'mapbox/satellite-v9', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
-    var streets = L.tileLayer(mbUrl, {id: 'mapbox/streets-v11', tileSize: 512, zoomOffset: -1, attribution: mbAttr});
+    var satellite = L.tileLayer(mbUrl, {
+      id: 'mapbox/satellite-v9',
+      tileSize: 512,
+      zoomOffset: -1,
+      attribution: mbAttr,
+    });
+    var streets = L.tileLayer(mbUrl, {
+      id: 'mapbox/streets-v11',
+      tileSize: 512,
+      zoomOffset: -1,
+      attribution: mbAttr,
+    });
     var baseLayers = {
       OpenStreetMap: osm,
       Strade: streets,
@@ -145,8 +179,8 @@
     };
 
     var overlays = {
-      "Luoghi frequentati": scuole,
-      "Monumenti":monumenti,
+      'Luoghi frequentati': scuole,
+      Monumenti: monumenti,
     };
 
     var layerControl = L.control.layers(baseLayers, overlays).addTo(map);
