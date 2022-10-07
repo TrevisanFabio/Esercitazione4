@@ -10,7 +10,19 @@ $(document).ready(function () {
         let u = users[user];
 
         let el = $(
-          '<tr><td>' + u.email + '</td><td>' + u.firstName + '</td></tr>'
+          '<tr><td>' + img,
+          (src =
+            'http://xsgames.co/randomusers/assets/avatars/' +
+            u.gender +
+            '/ ' +
+            Math.floor(Math.random() * 10) +
+            1 +
+            '.jpg' +
+            '<tr><td>' +
+            u.email +
+            '</td><td>' +
+            u.firstName +
+            '</td></tr>')
         );
 
         usersTable.append(el);
