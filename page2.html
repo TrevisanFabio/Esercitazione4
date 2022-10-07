@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script src="script.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -70,6 +71,8 @@
       <main>
         <h1>Esplora la mappa</h1>
         <div id="map"></div>
+        <h5>Queste sono le aree più frequentate di Vicenza</h5>
+        <button onclick="getRandomLatLng()">Trova persona random</button>
       </main>
     </div>
   </body>
@@ -184,5 +187,6 @@
     };
 
     var layerControl = L.control.layers(baseLayers, overlays).addTo(map);
+    
   </script>
 </html>
