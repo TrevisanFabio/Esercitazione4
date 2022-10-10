@@ -10,14 +10,27 @@ function getRandomLatLng(map) {
       southWest.lat + latSpan * Math.random(),
       southWest.lng + lngSpan * Math.random());
 }
+var x="Eugenio Velia"
+y=Math.floor(Math.random() * 30);
+fetch('https://dummyjson.com/users/1')
+.then(res => res.json())
+.then(results => {
+            console.log(results)
+            document.getElementById("card-title").innerHTML=results.username})
+
+fetch('https://dummyjson.com/posts/1')
+  .then(res => res.json())
+  .then(results => {
+    console.log(results)
+  document.getElementById("card-body").innerHTML=results.body})
 
 
-
-    var x="Eugenio Velia"
-    var y=0 
+  
+  var y=0 
     y=Math.floor(Math.random() * 30);
     
     function addlike(){
       y++
       document.getElementById("like").innerHTML=y
     }
+  
