@@ -50,31 +50,48 @@
       </div>
     </div>
   </nav>
-    <div class="container text-bg-light">
-    <main>
-      <h1 class="title">Profilo</h1>
-      <br>
-      <form>
+  <section class="vh-100">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-5 d-none d-md-block">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
+                alt="login form" class="img-fluid" style="border-radius: 1rem 0 0 1rem;" />
+            </div>
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-4 p-lg-5 text-black">
 
-      <h1 class="h3 mb-3 fw-normal">Login</h1>
-      
-      <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Indirizzo email</label>
+                  <div class="d-flex align-items-center mb-3 pb-1">
+                    <i class="fas fa-cubes fa-2x me-3" style="color: #ff6219;"></i>
+                    <span class="h1 fw-bold mb-0">Login</span>
+                  </div>
+                      
+                  <div id="login-error-msg-holder">
+                  <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
+                  </div>
+                  <form id="login-form">
+                  <div class="form-outline mb-4">
+                    <input type="text" name="username" id="username-field" class="form-control form-control-lg" placeholder="Username"/>
+                  </div>
+
+                  <div class="form-outline mb-4">
+                    <input type="password" placeholder="Password" name="password" id="password-field" class="form-control form-control-lg" />
+                  </div>
+
+                  <div class="pt-1 mb-4">
+                    <button type="submit" value="Login" class="btn btn-dark btn-lg btn-block" id="login-form-submit">Login</button>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Password</label>
-      </div>
-  
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Ricordami
-        </label>
-      </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit" onclick="login()">Accedi</button>
-    </form>
-    </main>
+    </div>
   </div>
+</section>
   </body>
 </html>
