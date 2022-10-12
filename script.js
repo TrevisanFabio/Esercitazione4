@@ -12,13 +12,13 @@ function getRandomLatLng(map) {
 }
 var x="Eugenio Velia"
 y=Math.floor(Math.random() * 30);
-fetch('https://dummyjson.com/users/1')
+fetch('https://dummyjson.com/users/'+y)
 .then(res => res.json())
 .then(results => {
             console.log(results)
             document.getElementById("card-title").innerHTML=results.username})
 
-fetch('https://dummyjson.com/posts/1')
+fetch('https://dummyjson.com/posts/'+y)
   .then(res => res.json())
   .then(results => {
     console.log(results)
@@ -32,5 +32,5 @@ fetch('https://dummyjson.com/posts/1')
     function addlike(){
       y++
       document.getElementById("like").innerHTML=y
+      
     }
-  
