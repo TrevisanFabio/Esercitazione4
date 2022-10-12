@@ -51,11 +51,11 @@
     <div class="container text-bg-light">
     <main>
       <h1 class="title">Statistiche</h1>
-      <canvas id="myChart" width="400" height="400"></canvas>
+      <canvas id="myChart" width="300" height="300"></canvas>
       <br>
       <br>
-      <div stats>Percentuali eta' utenti</div>
-      <canvas id="myChart2" width="400" height="400"></canvas>
+      <div class="stats">Percentuali eta' utenti</div>
+      <canvas id="myChart2" width="300" height="300"></canvas>
     </main>
     </div>
   </body>
@@ -64,9 +64,6 @@
   const ctx = document.getElementById('myChart').getContext('2d');
   const myChart = new Chart(ctx, {
     type: 'bar',
-    title:{
-        text: "U.S Smartphone OS Market Share, Q3 2012",
-      },
     data: {
         labels: ['Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre'],
         datasets: [{
