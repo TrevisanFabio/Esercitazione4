@@ -67,16 +67,12 @@
           <tr>
               <th>Nome</th>
               <th>Cognome</th>
-              <th>Username</th>
-              <th>Id</th>
           </tr>
       </thead>
       <tfoot>
           <tr>
-          <th>Nome</th>
-          <th>Cognome</th>
-          <th>Username</th>
-          <th>Id</th>
+              <th>Name</th>
+              <th>Cognome</th>
           </tr>
       </tfoot>
     </table>
@@ -149,17 +145,19 @@
     },
 
   });
-var url = "https://dummyjson.com/users";
-
-    $('#example').DataTable( {
-        "ajax": "https://dummyjson.com/users",
-        "columns": [
-            { "data": "firstName" },
-            { "data": "lastName" },
-            { "data": "username" },
-            { "data": "id" },
-        ]
-    } );
+  $(document).ready(function() {
+    $('#example').DataTable({
+        "ajax" : {
+            "url" : "https://dummyjson.com/users",
+            dataSrc : ''
+        },
+        "columns" : [ {
+            "data" : "id"
+        }, {
+            "data" : "firstName"
+        }]
+    });
+});
   </script>
   
 </html>
