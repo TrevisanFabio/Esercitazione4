@@ -67,12 +67,16 @@
           <tr>
               <th>Nome</th>
               <th>Cognome</th>
+              <th>Username</th>
+              <th>Id</th>
           </tr>
       </thead>
       <tfoot>
           <tr>
               <th>Name</th>
               <th>Cognome</th>
+              <th>Username</th>
+              <th>Id</th>
           </tr>
       </tfoot>
     </table>
@@ -152,9 +156,14 @@
             dataSrc : ''
         },
         "columns" : [ {
-            "data" : "id"
+          "data" : "firstName"
+
         }, {
-            "data" : "firstName"
+          "data" : "lastName"
+        }, {
+          "data" : "username"
+        }, {
+          "data" : "id"
         }]
     });
 });
