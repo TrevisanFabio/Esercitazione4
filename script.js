@@ -17,7 +17,7 @@ $(document).ready(function () {
             '/' +
             Math.floor(Math.random() * 10) + 1 +
             '.jpg'
-          )+
+          ) +
           '</td><td>' +
           u.email +
           '</td><td>' +
