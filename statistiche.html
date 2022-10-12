@@ -54,6 +54,7 @@
       <canvas id="myChart" width="400" height="400"></canvas>
       <br>
       <br>
+      <div stats>Percentuali eta' utenti</div>
       <canvas id="myChart2" width="400" height="400"></canvas>
     </main>
     </div>
@@ -102,10 +103,10 @@
   const myChart2 = new Chart(char, {
     type: 'doughnut',
     data: {
-        labels: ['Maggio', 'Giugno', 'Luglio', 'Agosto', 'Settembre', 'Ottobre'],
+        labels: ['12-14', '14-16', '16-18', '20-35', '35-50', '50+'],
         datasets: [{
             label: 'Visitatori in migliaia',
-            data: [9, 13, 18, 20, 10, 6],
+            data: [11, 33, 33, 13, 7, 2],
             backgroundColor: [
                 'rgba(255, 99, 132, 0.2)',
                 'rgba(54, 162, 235, 0.2)',
@@ -125,13 +126,7 @@
             borderWidth: 1
         }]
     },
-    options: {
-        scales: {
-            y: {
-                beginAtZero: true
-            }
-        }
-    }
+
   });
 
   </script>

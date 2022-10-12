@@ -93,3 +93,7 @@ h1 {
   cursor: pointer;
   outline: none;
 }
+.stats{
+  text-align: center;
+  color: #008000;
+}
